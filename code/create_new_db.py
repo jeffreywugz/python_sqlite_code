@@ -1,5 +1,5 @@
 # Sebastian Raschka, 2014
-# Updating rows in an existing SQLite database
+# Creating a new SQLite database
 
 import sqlite3
 
