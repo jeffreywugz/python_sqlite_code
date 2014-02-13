@@ -3,10 +3,10 @@
 
 import sqlite3
 
-sqlite_file = 'my_db'
-table_name = 'my_table'
-new_field = 'my_1st_column'
-field_type = 'INTEGER'
+sqlite_file = 'my_db'	# name of the sqlite database file
+table_name = 'my_table'	# name of the table to be created
+new_field = 'my_1st_column'	# name of the column
+field_type = 'INTEGER'	# column data type
 
 conn = sqlite3.connect(sqlite_file)
 c = conn.cursor()
