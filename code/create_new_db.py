@@ -3,8 +3,8 @@
 
 import sqlite3
 
-sqlite_file = ''
-table_name = ''
+sqlite_file = 'my_db'
+table_name = 'my_table'
 new_field = 'my_1st_column'
 field_type = 'INTEGER'
 
