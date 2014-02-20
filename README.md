@@ -4,6 +4,26 @@ python_sqlite_code
 Code for working with SQLite databases in Python
 
 
+### Script for printing a database summary
+
+Script: [./code/print_db_info.py](./code/print_db_info.py)
+
+**Example output:**
+<pre>
+ Total rows: 140059029
+
+ Column Info:
+ ID, Name, Type, NotNull, DefaultVal, PrimaryKey
+ (0, 'molecule_id', 'TEXT', 0, None, 0)
+ (1, 'purchasable', 'INT', 0, None, 0)
+ (2, 'db_origin', 'TEXT', 0, None, 0)
+
+ Number of entries per column:
+ molecule_id: 140059029
+ db_origin: 6059029
+ purchasable: 6059029
+</pre>
+
 ### Creating a new SQLite database
 
 Script: [./code/create_new_db.py](./code/create_new_db.py)
