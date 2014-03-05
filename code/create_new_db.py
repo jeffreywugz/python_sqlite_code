@@ -3,7 +3,7 @@
 
 import sqlite3
 
-sqlite_file = 'my_db'	# name of the sqlite database file
+sqlite_file = 'my_db.sqlite'	# name of the sqlite database file
 table_name = 'my_table'	# name of the table to be created
 new_field = 'my_1st_column'	# name of the column
 field_type = 'INTEGER'	# column data type
