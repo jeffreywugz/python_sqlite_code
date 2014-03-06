@@ -68,7 +68,15 @@ Script: [./code/updating_rows.py](./code/updating_rows.py)
 
 ### Inserting or updating records
 Update records or insert them if they don't exist.  
-Note that this is a workaround to accomodate for missing  
+Note that this is a workaround to accommodate for missing  
 SQL features in SQLite.  
 
 Script: [./code/update_or_insert_records.py](./code/update_or_insert_records.py)
+
+
+
+
+### Date and Time operations
+Inserting dates and times into a SQLite database and creating SQLite queries based on dates and times.
+
+Script: [./code/date_time_ops.py](./code/date_time_ops.py)
