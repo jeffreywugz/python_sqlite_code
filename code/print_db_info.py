@@ -82,7 +82,6 @@ if __name__ == '__main__':
     sqlite_file = 'my_first_db.sqlite'
     table_name = 'my_table_3'
 
-
     conn, c = connect(sqlite_file)
     total_rows(c, table_name, print_out=True)
     table_col_info(c, table_name, print_out=True)
