@@ -1,19 +1,24 @@
 # Sebastian Raschka 2014
 # Prints Information of a SQLite database.
+
 # E.g.,
 #
-# Total rows: 140059029
-#
-# Column Info:
-# ID, Name, Type, NotNull, DefaultVal, PrimaryKey
-# (0, 'molecule_id', 'TEXT', 0, None, 0)
-# (1, 'purchasable', 'INT', 0, None, 0)
-# (2, 'db_origin', 'TEXT', 0, None, 0)
-#
-# Number of entries per column:
-# molecule_id: 140059029
-# db_origin: 6059029
-# purchasable: 6059029
+"""
+Total rows: 1
+
+Column Info:
+ID, Name, Type, NotNull, DefaultVal, PrimaryKey
+(0, 'id', 'TEXT', 0, None, 1)
+(1, 'date', '', 0, None, 0)
+(2, 'time', '', 0, None, 0)
+(3, 'date_time', '', 0, None, 0)
+
+Number of entries per column:
+date: 1
+date_time: 1
+id: 1
+time: 1
+"""
 
 import sqlite3
 
@@ -74,8 +79,9 @@ def values_in_col(cursor, table_name, print_out=True):
 
 if __name__ == '__main__':
 
-    sqlite_file = '/home/.../db1.sqlite'
-    table_name = 'table1'
+    sqlite_file = 'my_first_db.sqlite'
+    table_name = 'my_table_3'
+
 
     conn, c = connect(sqlite_file)
     total_rows(c, table_name, print_out=True)
