@@ -1,5 +1,5 @@
 # Sebastian Raschka, 2014
-# Getting column names of an SQLite database
+# Getting column names of an SQLite database table
 
 import sqlite3
 
