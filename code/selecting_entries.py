@@ -39,8 +39,8 @@ ten_rows = c.fetchall()
 print('4):', ten_rows)
 
 # 5) Check if a certain ID exists and print its column contents
-c.execute("SELECT * FROM {tn} WHERE {idf}={my_id}".\
-        format(tn=table_name, cn=column_2, idf=id_column, my_id=some_id))
+c.execute("SELECT * FROM {tn} WHERE {idf}=?".\
+        format(tn=table_name, cn=column_2, idf=id_column), (123456,))
 id_exists = c.fetchone()
 if id_exists:
     print('5): {}'.format(id_exists))
