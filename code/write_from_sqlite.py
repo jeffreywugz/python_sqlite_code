@@ -1,5 +1,55 @@
 import sqlite3
 
+def create_col_index(db_name, table_name, column_name, index_name):
+    '''
+    Creates a column index on a SQLite table.
+    
+    Keyword arguments:
+        db_name (str): Path of the .sqlite database file.
+        table_name (str): Name of the target table in the SQLite file.
+        condition (str): Condition for querying the SQLite database table.
+        column_name (str): Name of the column for which the index is created.
+
+    '''
+
+    # Connecting to the database file
+    conn = sqlite3.connect(db_name)
+    c = conn.cursor()
+
+    # Creating the index
+    c.execute('CREATE INDEX {} ON {} ({})'.format(index_name, table_name, column_name))
+
+    # Save index and close the connection to the database
+    conn.commit()
+    conn.close()
+
+
+
+def drop_col_index(db_name, index_name):
+    '''
+    Drops a column index from a SQLite table.
+    
+    Keyword arguments:
+        db_name (str): Path of the .sqlite database file.
+        table_name (str): Name of the target table in the SQLite file.
+        condition (str): Condition for querying the SQLite database table.
+        column_name (str): Name of the column for which the index is dropped.
+
+    '''
+
+    # Connecting to the database file
+    conn = sqlite3.connect(db_name)
+    c = conn.cursor()
+
+    # Drops the index
+    c.execute('DROP INDEX {}'.format(index_name))
+
+    # Save index and close the connection to the database
+    conn.commit()
+    conn.close()
+
+
+
 def write_from_query(db_name, table_name, condition, content_column, out_file, fetchmany=False):
     '''
     Writes contents from a SQLite database column to an output file
@@ -8,9 +58,8 @@ def write_from_query(db_name, table_name, condition, content_column, out_file, f
         db_name (str): Path of the .sqlite database file.
         table_name (str): Name of the target table in the SQLite file.
         condition (str): Condition for querying the SQLite database table.
-        content_colum (str): Name of the column that contains the content for the output file.
+        content_column (str): Name of the column that contains the content for the output file.
         out_file (str): Path of the output file that will be written.
-        fetchmany (int): Fetch multiple rows at once
 
     '''
     # Connecting to the database file
